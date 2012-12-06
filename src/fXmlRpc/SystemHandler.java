@@ -3,6 +3,7 @@ package fXmlRpc;
 import java.util.Map;
 import java.util.List;
 import java.util.Date;
+import org.apache.xmlrpc.XmlRpcException;
 
 public class SystemHandler {
 
@@ -39,5 +40,13 @@ public class SystemHandler {
     public Date echo(Date d)
     {
         return d;
+    }
+
+    public void echoNull() {
+    }
+
+    public void fault()
+    throws XmlRpcException {
+        throw new XmlRpcException(123, "ERROR");
     }
 }
