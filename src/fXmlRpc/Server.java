@@ -13,9 +13,9 @@ public class Server {
 
         XmlRpcServer server = webServer.getXmlRpcServer();
 
-        PropertyHandlerMapping phm = new PropertyHandlerMapping();
-        phm.addHandler("system", SystemHandler.class);
-        server.setHandlerMapping(phm);
+        PropertyHandlerMapping mapping = new PropertyHandlerMapping();
+        mapping.addHandler("system", SystemHandler.class);
+        server.setHandlerMapping(mapping);
 
         XmlRpcServerConfigImpl serverConfig = (XmlRpcServerConfigImpl) server.getConfig();
         serverConfig.setEnabledForExtensions(true);
