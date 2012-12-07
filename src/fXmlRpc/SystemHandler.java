@@ -42,10 +42,11 @@ public class SystemHandler {
         return d;
     }
 
-    public void echoNull() {
+    public Object echoNull(Object n) {
+        return null;
     }
 
-    public void fault()
+    public String fault()
     throws XmlRpcException {
         throw new XmlRpcException(123, "ERROR");
     }
