@@ -43,5 +43,6 @@ class ErrorHandler implements HttpHandler
 {
     public void handle(HttpExchange exchange) throws IOException {
         exchange.sendResponseHeaders(500, 0);
+        exchange.close();
     }
 }
